@@ -1,0 +1,17 @@
+import "./App.css";
+import { Link } from "react-router-dom";
+
+function App() {
+  return (
+    <>
+      <h2>React projects</h2>
+      <ul>
+        <li>
+          <Link to="/accordian">Accordian</Link>
+        </li>
+      </ul>
+    </>
+  );
+}
+
+export default App;
