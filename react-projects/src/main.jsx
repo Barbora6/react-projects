@@ -6,7 +6,7 @@ import { Accordian } from "./components/Accordian.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
-  { path: "/forms", element: <Accordian /> }
+  { path: "/accordian", element: <Accordian /> }
 ]);
 
 createRoot(document.getElementById("root")).render(
