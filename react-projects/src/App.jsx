@@ -12,6 +12,9 @@ function App() {
         <li>
           <Link to="/randomcolor">Generátov barev</Link>
         </li>
+        <li>
+          <Link to="/star-rating">Hodnocení hvězdičkami</Link>
+        </li>
       </ul>
     </>
   );
