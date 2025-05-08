@@ -10,7 +10,7 @@ const router = createBrowserRouter([
   { path: "/", element: <App /> },
   { path: "/accordian", element: <Accordian /> },
   { path: "/randomcolor", element: <RandomColor /> },
-  { path: "/star-rating", element: <StarRating /> }
+  { path: "/star-rating", element: <StarRating noOfStars={10} /> }
 ]);
 
 createRoot(document.getElementById("root")).render(
