@@ -15,6 +15,7 @@ function App() {
         <li>
           <Link to="/star-rating">Hodnocení hvězdičkami</Link>
         </li>
+        <li to="/image-slider">Image slider</li>
       </ul>
     </>
   );
