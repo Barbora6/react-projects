@@ -46,8 +46,21 @@ export const RandomColor = () => {
       >
         Generátor náhodné barvy
       </button>
-
-      <h1>{color}</h1>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          color: "#fff",
+          fontSize: "48px",
+          marginTop: "50px",
+          flexDirection: "column",
+          gap: "20px"
+        }}
+      >
+        <h3>{typeOfColor === "rgb" ? "RGB Color" : "HEX Color"}</h3>
+        <h1>{color}</h1>
+      </div>
     </div>
   );
 };
