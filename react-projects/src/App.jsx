@@ -9,6 +9,9 @@ function App() {
         <li>
           <Link to="/accordian">Accordian</Link>
         </li>
+        <li>
+          <Link to="/randomcolor">Generátov barev</Link>
+        </li>
       </ul>
     </>
   );
