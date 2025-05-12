@@ -10,7 +10,7 @@ export const LoadButton = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        `https://dummyjson.com/products?limit=10&skip=${
+        `https://dummyjson.com/products?limit=12&skip=${
           count === 0 ? 0 : count * 20
         }`
       );
@@ -18,7 +18,7 @@ export const LoadButton = () => {
       const result = await response.json();
 
       if (result && result.products && result.products.length) {
-        setProducts(result.products);
+        setProducts((prevData) => [...prevData, ...result.products]);
         setLoading(false);
       }
 
@@ -31,15 +31,29 @@ export const LoadButton = () => {
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [count]);
 
   if (loading) {
     return <div>Načítání dat. Prosím čekejte!</div>;
   }
 
   return (
-    <div className="container">
-      <h2>Load more button</h2>
+    <div className="load-more-container">
+      <div className="product-container">
+        {products && products.length
+          ? products.map((item) => (
+              <div className="product" key={item.id}>
+                <img src={item.thumbnail} alt={item.title} />
+                <p>{item.title}</p>
+              </div>
+            ))
+          : null}
+      </div>
+      <div className="button-container">
+        <button onClick={() => setCount(count + 1)}>
+          Načtení více produktů
+        </button>
+      </div>
     </div>
   );
 };
