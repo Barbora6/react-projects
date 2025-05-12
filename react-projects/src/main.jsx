@@ -14,7 +14,9 @@ const router = createBrowserRouter([
   { path: "/star-rating", element: <StarRating noOfStars={10} /> },
   {
     path: "/image-slider",
-    element: <Slider />
+    element: (
+      <Slider url={"https://picsum.photos/v2/list"} page={"1"} limit={"10"} />
+    )
   }
 ]);
 

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function App() {
   return (
     <>
-      <h2>React projects</h2>
+      <h2>React projects from freeCodeCamp.org</h2>
       <ul>
         <li>
           <Link to="/accordian">Accordian</Link>
@@ -15,7 +15,9 @@ function App() {
         <li>
           <Link to="/star-rating">Hodnocení hvězdičkami</Link>
         </li>
-        <li to="/image-slider">Image slider</li>
+        <li>
+          <Link to="/image-slider">Image slider</Link>
+        </li>
       </ul>
     </>
   );
