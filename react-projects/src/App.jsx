@@ -18,6 +18,9 @@ function App() {
         <li>
           <Link to="/image-slider">Image slider</Link>
         </li>
+        <li>
+          <Link to="/load-more-button">Load more button</Link>
+        </li>
       </ul>
     </>
   );

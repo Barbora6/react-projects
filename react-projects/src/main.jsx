@@ -6,6 +6,7 @@ import { Accordian } from "./components/accordian/Accordian.jsx";
 import { RandomColor } from "./components/randomColor/RandomColor.jsx";
 import { StarRating } from "./components/star-rating/StarRating.jsx";
 import { Slider } from "./components/slider/Slider.jsx";
+import { LoadButton } from "./components/load more button/LoadButton.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
     element: (
       <Slider url={"https://picsum.photos/v2/list"} page={"1"} limit={"10"} />
     )
+  },
+  {
+    path: "/load-more-button",
+    element: <LoadButton />
   }
 ]);
 
