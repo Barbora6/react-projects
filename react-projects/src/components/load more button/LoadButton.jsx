@@ -5,6 +5,7 @@ export const LoadButton = () => {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
   const [count, setCount] = useState(0);
+  const [disableButton, setDisableButton] = useState(false);
 
   const fetchProducts = async () => {
     try {
@@ -33,6 +34,10 @@ export const LoadButton = () => {
     fetchProducts();
   }, [count]);
 
+  useEffect(() => {
+    if (products && products.length === 100) setDisableButton(true);
+  }, [products]);
+
   if (loading) {
     return <div>Načítání dat. Prosím čekejte!</div>;
   }
@@ -50,9 +55,11 @@ export const LoadButton = () => {
           : null}
       </div>
       <div className="button-container">
-        <button onClick={() => setCount(count + 1)}>
+        <button disabled={disableButton} onClick={() => setCount(count + 1)}>
           Načtení více produktů
         </button>
+
+        {disableButton ? <p>Dosáhli jste limitu zobrazení!</p> : null}
       </div>
     </div>
   );
