@@ -12,7 +12,7 @@ export const LoadButton = () => {
       setLoading(true);
       const response = await fetch(
         `https://dummyjson.com/products?limit=12&skip=${
-          count === 0 ? 0 : count * 20
+          count === 0 ? 0 : count * 12
         }`
       );
 
@@ -33,10 +33,12 @@ export const LoadButton = () => {
   useEffect(() => {
     fetchProducts();
   }, [count]);
+  // Spustí se vždy, když se změní count
 
   useEffect(() => {
     if (products && products.length === 100) setDisableButton(true);
   }, [products]);
+  // Pokud je celkem načteno 100 produktů, tlačítko se deaktivuje
 
   if (loading) {
     return <div>Načítání dat. Prosím čekejte!</div>;
@@ -54,11 +56,12 @@ export const LoadButton = () => {
             ))
           : null}
       </div>
+      {/* Iteruje přes pole products a pro každý produkt vykreslí obrázek a název. */}
       <div className="button-container">
         <button disabled={disableButton} onClick={() => setCount(count + 1)}>
           Načtení více produktů
         </button>
-
+        {/* Při kliknutí zvýší count → spustí se fetchProducts() */}
         {disableButton ? <p>Dosáhli jste limitu zobrazení!</p> : null}
       </div>
     </div>
