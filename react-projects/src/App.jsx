@@ -30,6 +30,9 @@ function App() {
           <li>
             <Link to="/code-generator">QR Code Generator</Link>
           </li>
+          <li>
+            <Link to="/light-dark-mode">Light and Dark Mode</Link>
+          </li>
         </ol>
       </section>
     </>
