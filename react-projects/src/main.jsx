@@ -9,7 +9,7 @@ import { Slider } from "./components/slider/Slider.jsx";
 import { LoadButton } from "./components/load more button/LoadButton.jsx";
 import { Navigation } from "./components/navigation menu/Navigation.jsx";
 import { menus } from "./components/navigation menu/data.js";
-import { CodeGenerator } from "./components/QR Code Generator/CodeGenerator.jsx";
+import { CodeGenerator } from "./components/QR-Code-Generator/CodeGenerator.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },

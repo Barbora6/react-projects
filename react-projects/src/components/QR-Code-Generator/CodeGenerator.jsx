@@ -5,9 +5,10 @@ export const CodeGenerator = () => {
   const [qrCode, setQrCode] = useState("");
   const [input, setInput] = useState("");
 
-  const handleGenerateQrCode = () => {
+  function handleGenerateQrCode() {
     setQrCode(input);
-  };
+    setInput("");
+  }
 
   return (
     <div>
@@ -17,17 +18,18 @@ export const CodeGenerator = () => {
           onChange={(e) => setInput(e.target.value)}
           type="text"
           name="qr-code"
-          placeholder="Zadejte svoji hodnotu:"
+          value={input}
+          placeholder="Zadejte požadovanou hodnotu:"
         />
         <button
           disabled={input && input.trim() !== "" ? false : true}
           onClick={handleGenerateQrCode}
         >
-          Generator
+          Generate
         </button>
       </div>
       <div>
-        <QRCode id="qr-code-value" value="" />
+        <QRCode id="qr-code-value" value={qrCode} size={400} bgColor="#fff" />
       </div>
     </div>
   );
