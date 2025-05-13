@@ -27,6 +27,9 @@ function App() {
           <li>
             <Link to="/navigation-menu">Navigation menu</Link>
           </li>
+          <li>
+            <Link to="/code-generator">QR Code Generator</Link>
+          </li>
         </ol>
       </section>
     </>
