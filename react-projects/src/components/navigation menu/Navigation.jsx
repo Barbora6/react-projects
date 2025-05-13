@@ -1,7 +1,10 @@
-export const Navigation = () => {
+import { MenuList } from "./MenuList";
+import "./Navigation.css";
+
+export const Navigation = ({ menus = [] }) => {
   return (
-    <div>
-      <h2>Navigation</h2>
+    <div className="tree-view-container">
+      <MenuList list={menus} />
     </div>
   );
 };

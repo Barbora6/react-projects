@@ -7,6 +7,8 @@ import { RandomColor } from "./components/randomColor/RandomColor.jsx";
 import { StarRating } from "./components/star-rating/StarRating.jsx";
 import { Slider } from "./components/slider/Slider.jsx";
 import { LoadButton } from "./components/load more button/LoadButton.jsx";
+import { Navigation } from "./components/navigation menu/Navigation.jsx";
+import { menus } from "./components/navigation menu/data.js";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -22,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/load-more-button",
     element: <LoadButton />
+  },
+  {
+    path: "/navigation-menu",
+    element: <Navigation menus={menus} />
   }
 ]);
 
