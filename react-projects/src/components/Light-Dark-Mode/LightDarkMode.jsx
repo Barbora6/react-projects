@@ -1,4 +1,4 @@
-import { useLocalStorage } from "./useLocalStroage";
+import { useLocalStorage } from "./useLocalStorage";
 import "./LightDarkMode.css";
 
 export const LightDarkMode = () => {
