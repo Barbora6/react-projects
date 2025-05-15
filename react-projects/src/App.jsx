@@ -33,6 +33,9 @@ function App() {
           <li>
             <Link to="/light-dark-mode">Light and Dark Mode</Link>
           </li>
+          <li>
+            <Link to="/scrolling">Scrollování</Link>
+          </li>
         </ol>
       </section>
     </>
